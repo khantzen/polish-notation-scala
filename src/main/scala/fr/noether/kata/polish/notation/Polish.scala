@@ -8,9 +8,7 @@ case class Polish() {
   val splitPolish: String => (List[Operator], List[Int]) = expression => {
     val brutSplit = expression.split(" ").toList
       .partition(symbol => Operator.isOperatorSymbol(symbol))
-    val tuple = (brutSplit._1.map(Operator.bySymbol).reverse, brutSplit._2.map(Integer.parseInt))
-    print(tuple)
-    tuple
+    (brutSplit._1.map(Operator.bySymbol).reverse, brutSplit._2.map(Integer.parseInt))
   }
 
   val solve: ((List[Operator], List[Int])) => Int = {
