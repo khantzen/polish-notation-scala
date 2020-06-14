@@ -2,7 +2,7 @@ package fr.noether.kata.polish.notation
 
 import org.scalatest.FlatSpec
 
-class PolishNotation extends FlatSpec {
+class DescribePolishNotation extends FlatSpec {
   val polish: Polish = Polish()
 
   "+ opérator" should "yield 0 when 0 sum with 0" in {
